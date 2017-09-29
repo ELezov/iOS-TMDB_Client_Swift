@@ -15,6 +15,8 @@
 		C57DEA921F7E95BD00A4F171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57DEA911F7E95BD00A4F171 /* Assets.xcassets */; };
 		C57DEA951F7E95BD00A4F171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57DEA931F7E95BD00A4F171 /* LaunchScreen.storyboard */; };
 		C57DEAA01F7E95BD00A4F171 /* ApiClientTMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DEA9F1F7E95BD00A4F171 /* ApiClientTMDBTests.swift */; };
+		C57DEAAD1F7E99C200A4F171 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DEAAC1F7E99C200A4F171 /* Movie.swift */; };
+		C57DEAAF1F7EC1DB00A4F171 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DEAAE1F7EC1DB00A4F171 /* BaseResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		C57DEA9B1F7E95BD00A4F171 /* ApiClientTMDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiClientTMDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57DEA9F1F7E95BD00A4F171 /* ApiClientTMDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTMDBTests.swift; sourceTree = "<group>"; };
 		C57DEAA11F7E95BD00A4F171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57DEAAC1F7E99C200A4F171 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C57DEAAE1F7EC1DB00A4F171 /* BaseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		C57DEA891F7E95BD00A4F171 /* ApiClientTMDB */ = {
 			isa = PBXGroup;
 			children = (
+				C57DEAAA1F7E998500A4F171 /* model */,
 				C57DEA8A1F7E95BD00A4F171 /* AppDelegate.swift */,
 				C57DEA8C1F7E95BD00A4F171 /* ViewController.swift */,
 				C57DEA8E1F7E95BD00A4F171 /* Main.storyboard */,
@@ -126,6 +131,23 @@
 				C57DEAA11F7E95BD00A4F171 /* Info.plist */,
 			);
 			path = ApiClientTMDBTests;
+			sourceTree = "<group>";
+		};
+		C57DEAAA1F7E998500A4F171 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C57DEAAB1F7E998B00A4F171 /* api */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		C57DEAAB1F7E998B00A4F171 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				C57DEAAC1F7E99C200A4F171 /* Movie.swift */,
+				C57DEAAE1F7EC1DB00A4F171 /* BaseResult.swift */,
+			);
+			name = api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57DEA8D1F7E95BD00A4F171 /* ViewController.swift in Sources */,
+				C57DEAAF1F7EC1DB00A4F171 /* BaseResult.swift in Sources */,
 				C57DEA8B1F7E95BD00A4F171 /* AppDelegate.swift in Sources */,
+				C57DEAAD1F7E99C200A4F171 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +569,7 @@
 				C57DEAA61F7E95BD00A4F171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C57DEAA71F7E95BD00A4F171 /* Build configuration list for PBXNativeTarget "ApiClientTMDBTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +578,7 @@
 				C57DEAA91F7E95BD00A4F171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
