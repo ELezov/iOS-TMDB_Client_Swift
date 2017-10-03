@@ -8,7 +8,8 @@ target 'ApiClientTMDB' do
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
   pod 'Kingfisher', '3.13'
-
+  pod 'RxSwift',    '~> 3.0'
+  pod 'RxCocoa',    '~> 3.0'
   # Pods for ApiClientTMDB
 
   target 'ApiClientTMDBTests' do
