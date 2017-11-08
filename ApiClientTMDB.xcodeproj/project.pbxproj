@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		29F527E83FA61530D5D2D273 /* Pods_ApiClientTMDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792DC32CECA451CBB3F85082 /* Pods_ApiClientTMDBTests.framework */; };
 		93ED78A42E02B1A9A82E90B8 /* Pods_ApiClientTMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332D2D259411CC7830A8746E /* Pods_ApiClientTMDB.framework */; };
+		95F856F71FB34EF9005005CC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F856F41FB34EF9005005CC /* Endpoint.swift */; };
+		95F856F81FB34EF9005005CC /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F856F51FB34EF9005005CC /* Network.swift */; };
+		95F856F91FB34EF9005005CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F856F61FB34EF9005005CC /* NetworkManager.swift */; };
+		95F856FB1FB34EFF005005CC /* CinemaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F856FA1FB34EFF005005CC /* CinemaService.swift */; };
+		95F857001FB353DB005005CC /* CinemaTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F856FD1FB353DB005005CC /* CinemaTableCellViewModel.swift */; };
+		95F857011FB353DB005005CC /* CinemaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F856FE1FB353DB005005CC /* CinemaTableViewCell.swift */; };
+		95F857021FB353DB005005CC /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95F856FF1FB353DB005005CC /* CinemaTableViewCell.xib */; };
 		C57DEA8B1F7E95BD00A4F171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DEA8A1F7E95BD00A4F171 /* AppDelegate.swift */; };
 		C57DEA8D1F7E95BD00A4F171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DEA8C1F7E95BD00A4F171 /* ViewController.swift */; };
 		C57DEA901F7E95BD00A4F171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57DEA8E1F7E95BD00A4F171 /* Main.storyboard */; };
@@ -38,6 +45,13 @@
 		5E1EDCD34A9C4F558CAF700A /* Pods-ApiClientTMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiClientTMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiClientTMDB/Pods-ApiClientTMDB.release.xcconfig"; sourceTree = "<group>"; };
 		742A4541305A07EFAEDC78C1 /* Pods-ApiClientTMDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiClientTMDBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApiClientTMDBTests/Pods-ApiClientTMDBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		792DC32CECA451CBB3F85082 /* Pods_ApiClientTMDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiClientTMDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F856F41FB34EF9005005CC /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		95F856F51FB34EF9005005CC /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		95F856F61FB34EF9005005CC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		95F856FA1FB34EFF005005CC /* CinemaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaService.swift; sourceTree = "<group>"; };
+		95F856FD1FB353DB005005CC /* CinemaTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaTableCellViewModel.swift; sourceTree = "<group>"; };
+		95F856FE1FB353DB005005CC /* CinemaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaTableViewCell.swift; sourceTree = "<group>"; };
+		95F856FF1FB353DB005005CC /* CinemaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CinemaTableViewCell.xib; sourceTree = "<group>"; };
 		C57DEA871F7E95BD00A4F171 /* ApiClientTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiClientTMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57DEA8A1F7E95BD00A4F171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C57DEA8C1F7E95BD00A4F171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +108,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		95F856F31FB34ED0005005CC /* network */ = {
+			isa = PBXGroup;
+			children = (
+				95F856FA1FB34EFF005005CC /* CinemaService.swift */,
+				95F856F41FB34EF9005005CC /* Endpoint.swift */,
+				95F856F51FB34EF9005005CC /* Network.swift */,
+				95F856F61FB34EF9005005CC /* NetworkManager.swift */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		95F856FC1FB353CC005005CC /* cinema_list */ = {
+			isa = PBXGroup;
+			children = (
+				C57DEAB21F7EC99C00A4F171 /* ViewModel.swift */,
+				C57DEA8C1F7E95BD00A4F171 /* ViewController.swift */,
+				95F856FD1FB353DB005005CC /* CinemaTableCellViewModel.swift */,
+				95F856FE1FB353DB005005CC /* CinemaTableViewCell.swift */,
+				95F856FF1FB353DB005005CC /* CinemaTableViewCell.xib */,
+			);
+			name = cinema_list;
+			sourceTree = "<group>";
+		};
 		C57DEA7E1F7E95BD00A4F171 = {
 			isa = PBXGroup;
 			children = (
@@ -117,14 +154,14 @@
 		C57DEA891F7E95BD00A4F171 /* ApiClientTMDB */ = {
 			isa = PBXGroup;
 			children = (
+				95F856FC1FB353CC005005CC /* cinema_list */,
+				95F856F31FB34ED0005005CC /* network */,
 				C57DEAAA1F7E998500A4F171 /* model */,
 				C57DEA8A1F7E95BD00A4F171 /* AppDelegate.swift */,
-				C57DEA8C1F7E95BD00A4F171 /* ViewController.swift */,
 				C57DEA8E1F7E95BD00A4F171 /* Main.storyboard */,
 				C57DEA911F7E95BD00A4F171 /* Assets.xcassets */,
 				C57DEA931F7E95BD00A4F171 /* LaunchScreen.storyboard */,
 				C57DEA961F7E95BD00A4F171 /* Info.plist */,
-				C57DEAB21F7EC99C00A4F171 /* ViewModel.swift */,
 				C57DEAB41F7EC9B200A4F171 /* Const.swift */,
 			);
 			path = ApiClientTMDB;
@@ -247,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95F857021FB353DB005005CC /* CinemaTableViewCell.xib in Resources */,
 				C57DEA951F7E95BD00A4F171 /* LaunchScreen.storyboard in Resources */,
 				C57DEA921F7E95BD00A4F171 /* Assets.xcassets in Resources */,
 				C57DEA901F7E95BD00A4F171 /* Main.storyboard in Resources */,
@@ -360,11 +398,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95F856F91FB34EF9005005CC /* NetworkManager.swift in Sources */,
+				95F856F71FB34EF9005005CC /* Endpoint.swift in Sources */,
 				C57DEAB31F7EC99C00A4F171 /* ViewModel.swift in Sources */,
+				95F856F81FB34EF9005005CC /* Network.swift in Sources */,
 				C57DEA8D1F7E95BD00A4F171 /* ViewController.swift in Sources */,
 				C57DEAAF1F7EC1DB00A4F171 /* BaseResult.swift in Sources */,
 				C57DEA8B1F7E95BD00A4F171 /* AppDelegate.swift in Sources */,
+				95F857001FB353DB005005CC /* CinemaTableCellViewModel.swift in Sources */,
+				95F857011FB353DB005005CC /* CinemaTableViewCell.swift in Sources */,
 				C57DEAAD1F7E99C200A4F171 /* Movie.swift in Sources */,
+				95F856FB1FB34EFF005005CC /* CinemaService.swift in Sources */,
 				C57DEAB51F7EC9B200A4F171 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
