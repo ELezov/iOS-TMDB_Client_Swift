@@ -1,11 +1,3 @@
-//
-//  BorderView.swift
-//  iOS-OpenWeatherMapClientRx
-//
-//  Created by Nikolay on 07.11.17.
-//  Copyright © 2017 Eugene Lezov. All rights reserved.
-//
-
 import UIKit
 
 @IBDesignable
