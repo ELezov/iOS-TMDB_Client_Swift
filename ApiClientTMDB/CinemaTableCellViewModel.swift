@@ -1,4 +1,3 @@
-
 class CinemaTableCellViewModel {
     var cinemaImgUrl: String?
     var cinemaTitle: String?

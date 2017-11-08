@@ -1,11 +1,3 @@
-//
-//  CinemaTableViewCell.swift
-//  ApiClientTMDB
-//
-//  Created by Nikolay on 08.11.17.
-//  Copyright © 2017 KODE. All rights reserved.
-//
-
 import UIKit
 import Kingfisher
 
@@ -17,12 +9,32 @@ class CinemaTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     static let id = "CinemaTableViewCell"
+    var movie: Movie?
     
-    
-    func loadImage(url: String){
-        posterImage.kf.setImage(with: URL(string: url))
+    var cinemaTableCellViewModel: CinemaTableCellViewModel? {
+        didSet{
+            resetViews()
+            initViews()
+        }
     }
     
+    func resetViews() {
+        self.cinemaTitleLabel.text = ""
+        self.descriptionLabel.text = ""
+        self.posterImage.image = UIImage(named: "placeholder")
+    }
+    
+    func initViews(){
+        self.cinemaTitleLabel.text = cinemaTableCellViewModel?.cinemaTitle
+        if let overview = cinemaTableCellViewModel?.cinemaDescription {
+            self.descriptionLabel.text = overview
+        }
+        if let path = cinemaTableCellViewModel?.cinemaImgUrl {
+            let urlString = BASE_IMG_URL + W_185 + path
+            self.posterImage.kf.setImage(with: URL(string: urlString), placeholder: UIImage(named: "placeholder"), options: [], progressBlock: nil, completionHandler: nil)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

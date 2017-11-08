@@ -1,9 +1,8 @@
-import Foundation
 import RxSwift
 import RxCocoa
 import ObjectMapper
 
-class ViewModel{
+class CinemaListViewModel{
 
 
     let disposeBag = DisposeBag()

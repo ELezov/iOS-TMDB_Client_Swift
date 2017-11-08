@@ -1,14 +1,4 @@
-//
-//  ViewController.swift
-//  ApiClientTMDB
-//
-//  Created by KODE_H6 on 29.09.17.
-//  Copyright © 2017 KODE. All rights reserved.
-//
-
 import UIKit
-import Alamofire
-import AlamofireObjectMapper
 import RxCocoa
 import RxSwift
 
@@ -16,7 +6,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var cinemaListViewModel: ViewModel?
+    var cinemaListViewModel: CinemaListViewModel?
     
     let disposeBag = DisposeBag()
 
@@ -25,12 +15,10 @@ class ViewController: UIViewController {
         initViewModel()
         initTable()
         initBindingViews()
-        
-        
     }
     
     func initViewModel(){
-        self.cinemaListViewModel = ViewModel()
+        self.cinemaListViewModel = CinemaListViewModel()
     }
     
     func initTable(){
@@ -40,20 +28,22 @@ class ViewController: UIViewController {
     }
     
     func initBindingViews(){
-        self.searchBar.rx.text.subscribe (onNext: { text in
+        self.searchBar.rx.text.subscribe(onNext: { text in
             self.cinemaListViewModel?.searchText.onNext(text!)
         })
         
         self.cinemaListViewModel?.dataSource.asObservable().bind(to: tableView.rx.items(cellIdentifier: CinemaTableViewCell.id, cellType: CinemaTableViewCell.self)) {
             (index, movie, cell: CinemaTableViewCell) in
-            cell.cinemaTitleLabel.text = movie.title
-            cell.descriptionLabel.text = movie.overview
-            if let path = movie.poster_path {
-                let urlString = BASE_IMG_URL + W_185 + path
-                //cell.posterImage.kf.setImage(with: URL(string: urlString))
-                cell.posterImage.kf.setImage(with: URL(string: urlString), placeholder: UIImage(named: "placeholder"), options: [], progressBlock: nil, completionHandler: nil)
-            }
+            cell.selectionStyle = .none
+            cell.cinemaTableCellViewModel = CinemaTableCellViewModel(movie: movie)
         }
+        
+        self.tableView.rx.itemSelected.subscribe(onNext: {
+            [weak self] indexPath in
+            if let cell = self?.tableView.cellForRow(at: indexPath) as? CinemaTableViewCell {
+                print("Select", cell.cinemaTitleLabel.text)
+            }
+        })
     }
 }
 
