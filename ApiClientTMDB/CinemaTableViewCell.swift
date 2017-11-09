@@ -9,7 +9,6 @@ class CinemaTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     static let id = "CinemaTableViewCell"
-    var movie: Movie?
     
     var cinemaTableCellViewModel: CinemaTableCellViewModel? {
         didSet{

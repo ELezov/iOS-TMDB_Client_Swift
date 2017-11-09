@@ -17,6 +17,16 @@ class ViewController: UIViewController {
         initBindingViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     func initViewModel(){
         self.cinemaListViewModel = CinemaListViewModel()
     }
@@ -42,8 +52,16 @@ class ViewController: UIViewController {
             [weak self] indexPath in
             if let cell = self?.tableView.cellForRow(at: indexPath) as? CinemaTableViewCell {
                 print("Select", cell.cinemaTitleLabel.text)
+                self?.toDetail(cell: cell)
             }
         })
+    }
+    
+    func toDetail(cell: CinemaTableViewCell){
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: CinemaDetailsViewController.id) as? CinemaDetailsViewController
+        vc?.cinemaDetailsViewModel = CinemaDetailsViewModel(id: cell.cinemaTableCellViewModel!.id!)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
 
