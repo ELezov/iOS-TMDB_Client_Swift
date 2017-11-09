@@ -14,5 +14,6 @@ let API_KEY = "e884c6c4beaa3674832113226d38c8aa"
 
 
 let PATH_SEARCH_MOVIE = "/search/movie"
+let PATH_MOVIE = "/movie"
 let BASE_IMG_URL = "https://image.tmdb.org/t/p"
 let W_185 = "/w185"
